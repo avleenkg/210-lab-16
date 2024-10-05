@@ -14,12 +14,18 @@ class Color {
     int ghues;
 
     public:
+    Color()                     { rhues = 0; bhues = 0; ghues = 0; } //default constructor
+    Color(int r)                { rhues = r; bhues = 0; ghues = 0; } //partial constructor 1
+    Color(int r, int b)         { rhues = r; bhues = b; ghues = 0; } //partial constructor 1
+    Color(int r, int b, int g)  { rhues = r; bhues = b; ghues = g; } //full parameter constructor
+
+    //setters and getters
     int getred() const      { return rhues; }
     int getblue() const     { return bhues; }
     int getgreen() const    { return ghues; }
     void setred(int r)      { rhues = r; }   
-    void setblue(int b)      { bhues = b; }
-    void setgreen(int g)      { ghues = g; }
+    void setblue(int b)     { bhues = b; }
+    void setgreen(int g)    { ghues = g; }
 
     void print() {
         cout << "------Color hues:------\n";
@@ -48,4 +54,16 @@ int main() {
     c3.setgreen(100);
     c3.print();
 
+    //new objects
+    Color c3;
+    c3.print();
+
+    Color c4(30);
+    c4.print();
+
+    Color c5(230, 19);
+    c5.print();
+
+    Color c6(101, 3, 47);
+    c6.print();
 }
