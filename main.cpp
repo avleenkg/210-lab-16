@@ -55,15 +55,15 @@ int main() {
     c3.print();
 
     //new objects
-    Color c3;
-    c3.print();
-
-    Color c4(30);
+    Color c4;
     c4.print();
 
-    Color c5(230, 19);
+    Color c5(30);
     c5.print();
 
-    Color c6(101, 3, 47);
+    Color c6(230, 19);
     c6.print();
+
+    Color c7(101, 3, 47);
+    c7.print();
 }
